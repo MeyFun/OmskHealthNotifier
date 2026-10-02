@@ -1,70 +1,99 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 import '../models/specialty.dart';
-import 'hospitals_screen.dart';
+import '../models/doctor.dart';
+import 'doctors_screen.dart';
 
 class SpecialtiesScreen extends StatefulWidget {
-  const SpecialtiesScreen({Key? key}) : super(key: key);
+  const SpecialtiesScreen({super.key});
 
   @override
   State<SpecialtiesScreen> createState() => _SpecialtiesScreenState();
 }
 
 class _SpecialtiesScreenState extends State<SpecialtiesScreen> {
-  bool _isLoading = false;
-  List<Specialty> _specialties = [];
+  late Future<List<Specialty>> _specialtiesFuture;
+
+  // Временная тестовая ссылка на поликлинику (можно менять или выбирать из списка LPU)
+  final String _hospitalUrl = 'https://omskzdrav.ru/service/schedule/550101000044127/timetable';
 
   @override
   void initState() {
     super.initState();
-    _fetchSpecialties();
+    _specialtiesFuture = _fetchSpecialties();
   }
 
-  Future<void> _fetchSpecialties() async {
-    setState(() => _isLoading = true);
+  Future<List<Specialty>> _fetchSpecialties() async {
+    final apiUrl = Uri.parse('http://10.0.2.2:8000/api/specialties?url=$_hospitalUrl');
 
-    // Заглушка: Позже заменим на реальный сетевой запрос к серверу
-    await Future.delayed(const Duration(seconds: 1));
-    setState(() {
-      _specialties = [
-        Specialty(id: '1', name: 'Терапевт'),
-        Specialty(id: '2', name: 'Офтальмолог'),
-        Specialty(id: '3', name: 'Хирург'),
-        Specialty(id: '4', name: 'Невролог'),
-      ];
-      _isLoading = false;
-    });
+    try {
+      final response = await http.get(apiUrl);
+      if (response.statusCode == 200) {
+        final data = jsonDecode(response.body);
+        final List list = data['specialties'] ?? [];
+
+        return list.map((specJson) {
+          final List docsJson = specJson['doctors'] ?? [];
+          final doctors = docsJson.map((d) => Doctor(
+            id: d['id'] ?? '',
+            name: d['name'] ?? 'Врач',
+            specialty: specJson['title'] ?? '',
+            hospitalName: 'ГБ №1 им. Кабанова',
+            scheduleUrl: d['schedule_url'] ?? '',
+          )).toList();
+
+          return Specialty(
+            id: specJson['id'] ?? '',
+            title: specJson['title'] ?? 'Специальность',
+            doctors: doctors,
+          );
+        }).toList();
+      }
+    } catch (e) {
+      debugPrint('Ошибка сети: $e');
+    }
+    return [];
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('1. Выберите специальность'),
+        title: const Text('Выбор специальности'),
       ),
-      body: _isLoading
-          ? const Center(child: CircularProgressIndicator())
-          : ListView.separated(
-              itemCount: _specialties.length,
-              separatorBuilder: (_, __) => const Divider(height: 1),
-              itemBuilder: (context, index) {
-                final specialty = _specialties[index];
-                return ListTile(
-                  title: Text(
-                    specialty.name,
-                    style: const TextStyle(fontWeight: FontWeight.w500),
-                  ),
-                  trailing: const Icon(Icons.chevron_right),
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (_) => HospitalsScreen(specialty: specialty),
-                      ),
-                    );
-                  },
-                );
-              },
-            ),
+      body: FutureBuilder<List<Specialty>>(
+        future: _specialtiesFuture,
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return const Center(child: CircularProgressIndicator());
+          }
+          final list = snapshot.data ?? [];
+          if (list.isEmpty) {
+            return const Center(child: Text('Специальности не найдены'));
+          }
+
+          return ListView.builder(
+            itemCount: list.length,
+            itemBuilder: (context, index) {
+              final spec = list[index];
+              return ListTile(
+                title: Text(spec.title, style: const TextStyle(fontWeight: FontWeight.w600)),
+                subtitle: Text('Врачей: ${spec.doctors.length}'),
+                trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => DoctorsScreen(specialty: spec),
+                    ),
+                  );
+                },
+              );
+            },
+          );
+        },
+      ),
     );
   }
 }

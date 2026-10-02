@@ -1,16 +1,13 @@
+import 'doctor.dart';
+
 class Specialty {
   final String id;
-  final String name;
+  final String title;
+  final List<Doctor> doctors;
 
   Specialty({
     required this.id,
-    required this.name,
+    required this.title,
+    required this.doctors,
   });
-
-  factory Specialty.fromJson(Map<String, dynamic> json) {
-    return Specialty(
-      id: json['id'].toString(),
-      name: json['name'] as String,
-    );
-  }
 }

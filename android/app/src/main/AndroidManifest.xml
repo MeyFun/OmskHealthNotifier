@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="omsk_health_notifier"
+        android:label="К Врачу - Омск"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

@@ -1,21 +1,21 @@
-enum TicketType { offline, online }
+enum SlotType {
+  free,
+  videochatFree,
+  busy,
+}
 
 class TicketSlot {
-  final String id; // Уникальный идентификатор талона (хэш, дата+время+тип)
+  final String id;
   final DateTime dateTime;
-  final TicketType type;
+  final String time;
+  final String date;
+  final SlotType type;
 
   TicketSlot({
     required this.id,
     required this.dateTime,
+    required this.time,
+    required this.date,
     required this.type,
   });
-
-  factory TicketSlot.fromJson(Map<String, dynamic> json) {
-    return TicketSlot(
-      id: json['id'] as String,
-      dateTime: DateTime.parse(json['date_time'] as String),
-      type: json['is_online'] == true ? TicketType.online : TicketType.offline,
-    );
-  }
 }

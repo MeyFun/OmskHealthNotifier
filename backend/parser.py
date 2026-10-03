@@ -1,6 +1,8 @@
+import re
 import requests
 from bs4 import BeautifulSoup
-import re
+
+BASE_URL = "https://omskzdrav.ru"
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
@@ -8,14 +10,9 @@ HEADERS = {
     "Accept-Language": "ru-RU,ru;q=0.9",
 }
 
-BASE_URL = "https://omskzdrav.ru"
-
 
 def parse_all_specialties():
-    """
-    1. Парсит глобальный список специальностей (Фото 1)
-    URL: https://omskzdrav.ru/service/schedule/profiles
-    """
+    """1. Парсит глобальный список специальностей"""
     url = f"{BASE_URL}/service/schedule/profiles"
     try:
         response = requests.get(url, headers=HEADERS, timeout=10)
@@ -28,7 +25,6 @@ def parse_all_specialties():
     soup = BeautifulSoup(response.text, "html.parser")
     specialties = []
 
-    # Ищем все ссылки на специальности в каталоге
     links = soup.find_all("a", href=re.compile(r"/service/schedule/\d+/0/doctors"))
 
     for link in links:
@@ -36,7 +32,7 @@ def parse_all_specialties():
         href = link.get("href", "")
         if title and href:
             full_url = href if href.startswith("http") else f"{BASE_URL}{href}"
-            spec_id = href.split("/")[3]  # извлекаем ID специальности (например 550101000000081)
+            spec_id = href.split("/")[3]
             
             specialties.append({
                 "id": spec_id,
@@ -49,13 +45,11 @@ def parse_all_specialties():
 
 def parse_doctors_by_specialty(doctors_url: str):
     """
-    2. Парсит полный список врачей по специальности (Фото 2)
-    Запрашивает per_page=999999, чтобы вернуть ВСЕХ врачей без ограничения пагинации.
+    2. Парсит полный список врачей по специальности с жесткой фильтрацией мусора и шапок
     """
     if not doctors_url.startswith("http"):
         doctors_url = f"{BASE_URL}{doctors_url}"
 
-    # Добавляем параметр per_page=999999 для загрузки всех врачей на одной странице
     if "?" in doctors_url:
         if "per_page" not in doctors_url:
             doctors_url += "&per_page=999999"
@@ -73,40 +67,62 @@ def parse_doctors_by_specialty(doctors_url: str):
     soup = BeautifulSoup(response.text, "html.parser")
     hospitals_data = []
 
-    # Находим все секции/блоки учреждений
-    # На omskzdrav блоки больниц обычно оборачиваются в контейнеры с названием ЛПУ
+    # Слова-мусор из заголовков таблицы или служебных мета-данных
+    BAD_KEYWORDS = [
+        "специалист", "специальность", "участок", "стоимость", 
+        "ближайшая запись", "оценка", "бесплатно", "врачей:"
+    ]
+
+    # Находим все блоки аккордеонов/больниц (пропускаем tr и шапки)
+    # На omskzdrav реальные больницы лежат в блоках с названиями ЛПУ
     hospital_sections = soup.find_all(["div", "section", "fieldset"], class_=re.compile(r"lpu|hospital|clinic|group|panel|block|accordion", re.I))
 
-    # Если структура с блоками найдена
-    if hospital_sections:
-        for section in hospital_sections:
-            # Ищем заголовок больницы внутри блока
-            header = section.find(["h2", "h3", "h4", "h5", "legend", "div", "a"], class_=re.compile(r"title|name|header|lpu", re.I))
-            hospital_name = header.text.strip() if header else None
+    for section in hospital_sections:
+        # Ищем заголовок именно больницы (обычно h2, h3, h4, legend или div.lpu-title)
+        header = section.find(["h2", "h3", "h4", "h5", "legend", "div", "a"], class_=re.compile(r"title|name|header|lpu", re.I))
+        if not header:
+            continue
 
-            # Ищем все ссылки на врачей внутри этой больницы
-            doc_links = section.find_all("a", href=re.compile(r"/service/schedule/\d+/timetable"))
-            doctors = []
+        hospital_name = header.text.strip()
+        
+        # Проверяем, что название больницы — это не мусорная строка шапки
+        h_name_lower = hospital_name.lower()
+        if any(bad in h_name_lower for bad in BAD_KEYWORDS) or len(hospital_name) < 5:
+            continue
 
-            for a in doc_links:
-                name = a.text.strip()
-                href = a.get("href", "")
-                if name and href:
+        # Собираем врачей ТОЛЬКО внутри текущего блока больницы
+        doc_links = section.find_all("a", href=re.compile(r"/service/schedule/\d+/timetable"))
+        doctors = []
+        seen_doc_ids = set()
+
+        for a in doc_links:
+            name = a.text.strip()
+            href = a.get("href", "")
+            
+            if name and href:
+                n_lower = name.lower()
+                # Пропускаем, если имя врача совпадает со словами шапки таблицы
+                if any(bad in n_lower for bad in BAD_KEYWORDS):
+                    continue
+
+                doc_id = href.split("/")[3]
+                if doc_id not in seen_doc_ids:
+                    seen_doc_ids.add(doc_id)
                     full_url = href if href.startswith("http") else f"{BASE_URL}{href}"
-                    doc_id = href.split("/")[3]
                     doctors.append({
                         "id": doc_id,
                         "name": name,
                         "schedule_url": full_url
                     })
 
-            if doctors and hospital_name:
-                hospitals_data.append({
-                    "hospital_name": hospital_name,
-                    "doctors": doctors
-                })
+        # Добавляем больницу, только если у неё есть реальные врачи
+        if doctors:
+            hospitals_data.append({
+                "hospital_name": hospital_name,
+                "doctors": doctors
+            })
 
-    # Если структурированные блоки не определились — собираем всех врачей сплошным списком
+    # Запасной вариант: если структура блоков не нашлась вообще (крайний случай)
     if not hospitals_data:
         doc_links = soup.find_all("a", href=re.compile(r"/service/schedule/\d+/timetable"))
         all_doctors = []
@@ -116,6 +132,8 @@ def parse_doctors_by_specialty(doctors_url: str):
             name = a.text.strip()
             href = a.get("href", "")
             if name and href:
+                if any(bad in name.lower() for bad in BAD_KEYWORDS):
+                    continue
                 doc_id = href.split("/")[3]
                 if doc_id not in seen_ids:
                     seen_ids.add(doc_id)
@@ -128,32 +146,23 @@ def parse_doctors_by_specialty(doctors_url: str):
 
         if all_doctors:
             hospitals_data.append({
-                "hospital_name": "Все медучреждения Омска и области",
+                "hospital_name": "Медучреждения Омска и области",
                 "doctors": all_doctors
             })
 
     return hospitals_data
 
-
 def parse_doctor_slots(doctor_url: str):
-    """
-    3. Парсит таблицу талонов конкретного врача
-    """
+    """3. Парсит расписание конкретного врача"""
     if not doctor_url.startswith("http"):
-        # Если передан относительный путь вида /service/schedule/...
         if not doctor_url.startswith("/"):
             doctor_url = "/" + doctor_url
         doctor_url = f"{BASE_URL}{doctor_url}"
 
     try:
-        # Устанавливаем таймаут 8 секунд, чтобы не вешать Swagger/браузер
         response = requests.get(doctor_url, headers=HEADERS, timeout=8)
         if response.status_code != 200:
-            print(f"Ошибка: статус ответа {response.status_code}")
             return []
-    except requests.exceptions.Timeout:
-        print("Ошибка: Превышено время ожидания ответа от omskzdrav.ru")
-        return []
     except Exception as e:
         print(f"Ошибка при запросе расписания врача: {e}")
         return []
@@ -162,7 +171,6 @@ def parse_doctor_slots(doctor_url: str):
         soup = BeautifulSoup(response.text, "html.parser")
         parsed_slots = []
 
-        # Ищем ячейки со свободными талонами
         cells = soup.find_all("td", class_=re.compile(r"\bfree\b"))
 
         for cell in cells:

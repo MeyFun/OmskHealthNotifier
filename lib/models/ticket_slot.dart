@@ -9,12 +9,14 @@ class TicketSlot {
   final String time;
   final String date;
   final SlotType type;
+  final String? rawRel;
 
   TicketSlot({
     required this.id,
     required this.time,
     required this.date,
     required this.type,
+    this.rawRel,
   });
 
   factory TicketSlot.fromJson(Map<String, dynamic> json) {
@@ -34,6 +36,7 @@ class TicketSlot {
       time: json['time'] ?? '',
       date: json['date'] ?? '',
       type: parsedType,
+      rawRel: json['rawRel']?.toString() ?? '',
     );
   }
 }

@@ -77,7 +77,6 @@ class HealthRepository {
       return [];
     }
   }
-
   List<TicketSlot> parseSlotsFromHtml(String htmlBody) {
     final document = html_parser.parse(htmlBody);
     final List<Map<String, dynamic>> tempSlots = [];
@@ -116,22 +115,34 @@ class HealthRepository {
 
     // --- СОРТИРОВКА ТАЛОНОВ ПО ДАТЕ И ВРЕМЕНИ ---
     tempSlots.sort((a, b) {
-      DateTime? dateA = _parseDateTime(
+      final dateA = _parseDateTime(
         a['date'] as String?,
         a['time'] as String?,
         a['rawRel'] as String?,
       );
-      DateTime? dateB = _parseDateTime(
+      final dateB = _parseDateTime(
         b['date'] as String?,
         b['time'] as String?,
         b['rawRel'] as String?,
       );
 
-      if (dateA == null && dateB == null) return 0;
-      if (dateA == null) return 1;
-      if (dateB == null) return -1;
+      // Если обе даты распарсились в DateTime — сравниваем их напрямую
+      if (dateA != null && dateB != null) {
+        return dateA.compareTo(dateB);
+      }
+      if (dateA != null) return -1;
+      if (dateB != null) return 1;
 
-      return dateA.compareTo(dateB);
+      // Запасной вариант: если год не указан, сравниваем числовые значения дня и времени
+      final dayA = int.tryParse(a['date'].toString().replaceAll(RegExp(r'\D'), '')) ?? 0;
+      final dayB = int.tryParse(b['date'].toString().replaceAll(RegExp(r'\D'), '')) ?? 0;
+
+      if (dayA != dayB) {
+        return dayA.compareTo(dayB);
+      }
+
+      // Если дни совпали — сравниваем время "HH:mm"
+      return (a['time'] as String).compareTo(b['time'] as String);
     });
 
     return tempSlots.map((e) => e['slot'] as TicketSlot).toList();
@@ -140,55 +151,54 @@ class HealthRepository {
   // Вспомогательный метод парсинга даты/времени из разных форматов
   DateTime? _parseDateTime(String? dateStr, String? timeStr, String? rawRel) {
     try {
-      // 1. Пробуем распарсить ISO / полный формат из rawRel (например "2026-10-13 10:12:00")
+      // 1. Пробуем распарсить полный ISO / timestamp из rawRel
       if (rawRel != null && rawRel.isNotEmpty) {
         final parsed = DateTime.tryParse(rawRel);
         if (parsed != null) return parsed;
       }
 
-      final date = dateStr ?? '';
-      final time = timeStr ?? '';
+      final date = (dateStr ?? '').trim();
+      final time = (timeStr ?? '').trim();
 
-      // 2. Если дата в формате DD.MM.YYYY
+      int hour = 0;
+      int minute = 0;
+      if (time.contains(':')) {
+        final tParts = time.split(':');
+        hour = int.tryParse(tParts[0]) ?? 0;
+        minute = int.tryParse(tParts[1]) ?? 0;
+      }
+
+      final now = DateTime.now();
+
+      // 2. Формат "DD.MM.YYYY" или "DD.MM"
       if (date.contains('.')) {
         final parts = date.split('.');
-        if (parts.length >= 3) {
+        if (parts.length >= 2) {
           final day = int.parse(parts[0]);
           final month = int.parse(parts[1]);
-          final year = int.parse(parts[2]);
-
-          int hour = 0;
-          int minute = 0;
-          if (time.contains(':')) {
-            final tParts = time.split(':');
-            hour = int.parse(tParts[0]);
-            minute = int.parse(tParts[1]);
-          }
-
+          final year = parts.length >= 3 ? int.parse(parts[2]) : now.year;
           return DateTime(year, month, day, hour, minute);
         }
-      } else if (date.contains('-')) {
-        // 3. Если дата в формате YYYY-MM-DD
+      } 
+      // 3. Формат "YYYY-MM-DD"
+      else if (date.contains('-')) {
         final parts = date.split('-');
         if (parts.length >= 3) {
           final year = int.parse(parts[0]);
           final month = int.parse(parts[1]);
           final day = int.parse(parts[2]);
-
-          int hour = 0;
-          int minute = 0;
-          if (time.contains(':')) {
-            final tParts = time.split(':');
-            hour = int.parse(tParts[0]);
-            minute = int.parse(tParts[1]);
-          }
-
           return DateTime(year, month, day, hour, minute);
         }
+      } 
+      // 4. Если в dateText передано просто число дня (например "13")
+      else if (RegExp(r'^\d+$').hasMatch(date)) {
+        final day = int.parse(date);
+        return DateTime(now.year, now.month, day, hour, minute);
       }
     } catch (e) {
       debugPrint('Ошибка парсинга даты талона: $e');
     }
     return null;
   }
+
 }

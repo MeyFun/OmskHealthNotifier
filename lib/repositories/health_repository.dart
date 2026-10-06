@@ -69,12 +69,11 @@ class HealthRepository {
 
       if (response.statusCode == 200) {
         return parseSlotsFromHtml(response.body);
-      } else {
-        return [];
       }
+      throw Exception('Не удалось загрузить талоны с сервера (${response.statusCode})');
     } catch (e) {
       debugPrint('Ошибка загрузки талонов: $e');
-      return [];
+      rethrow;
     }
   }
   List<TicketSlot> parseSlotsFromHtml(String htmlBody) {
@@ -200,5 +199,4 @@ class HealthRepository {
     }
     return null;
   }
-
 }

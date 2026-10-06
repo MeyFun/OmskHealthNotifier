@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../models/specialty.dart';
 import '../repositories/health_repository.dart';
 import '../services/favorites_service.dart';
+import 'account_screen.dart';
 import 'hospitals_screen.dart';
 
 class SpecialtiesScreen extends StatefulWidget {
@@ -75,6 +76,20 @@ class _SpecialtiesScreenState extends State<SpecialtiesScreen> {
       appBar: AppBar(
         title: const Text('Специальности'),
         centerTitle: true,
+        actions: [
+          IconButton(
+            tooltip: 'Личный кабинет',
+            icon: const Icon(Icons.account_circle_outlined),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute<void>(
+                  builder: (context) => const AccountScreen(),
+                ),
+              );
+            },
+          ),
+        ],
       ),
       body: Column(
         children: [

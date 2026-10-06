@@ -1,17 +1,33 @@
-# omsk_health_notifier
+# К Врачу — Омск
 
-A new Flutter project.
+Flutter-приложение для поиска специальностей, больниц и врачей, просмотра
+свободных талонов и отслеживания появления новых талонов.
 
-## Getting Started
+## Фоновое отслеживание на Android
 
-This project is a starting point for a Flutter application.
+При добавлении врача в очередь приложение запускает Android foreground service
+и показывает постоянное уведомление о состоянии мониторинга. Активные очереди
+проверяются примерно раз в 5 минут. После обнаружения талонов приложение
+отправляет уведомление и удаляет соответствующую очередь; службу останавливает,
+когда активных очередей больше нет.
 
-A few resources to get you started if this is your first Flutter project:
+Для более надёжной фоновой работы откройте «Личный кабинет» и выберите
+«Настроить работу без ограничений батареи». Это разрешение необязательно и
+может увеличить расход заряда.
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+Ограничения Android остаются в силе: система и прошивка производителя могут
+ограничивать фоновую работу, а принудительно остановленное пользователем
+приложение не может самостоятельно запуститься. На Android 15 и новее для
+foreground service типа `dataSync` действует системный лимит времени работы
+(до 6 часов за 24 часа для целевых приложений); ручной запуск приложения
+сбрасывает этот лимит. Поэтому непрерывную круглосуточную проверку гарантировать
+нельзя.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Запуск и проверка
+
+```shell
+flutter pub get
+flutter run
+flutter analyze
+flutter test
+```

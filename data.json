@@ -18611,14 +18611,14 @@
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000004745/timetable"
             },
             {
-              "id": "550101000004761",
-              "name": "Пирог Наталья Валерьевна",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000004761/timetable"
-            },
-            {
               "id": "550101000038641",
               "name": "Пирог Наталья Валерьевна",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000038641/timetable"
+            },
+            {
+              "id": "550101000004761",
+              "name": "Пирог Наталья Валерьевна",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000004761/timetable"
             },
             {
               "id": "550101000075390",
@@ -19379,11 +19379,6 @@
               "id": "550101000044293",
               "name": "Подчинёнова Екатерина Дмитриевна",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000044293/timetable"
-            },
-            {
-              "id": "550101000083601",
-              "name": "Холомеева Светлана Александровна",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000083601/timetable"
             }
           ]
         },
@@ -19771,14 +19766,14 @@
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000013155/timetable"
             },
             {
-              "id": "550101000053689",
-              "name": "Салангина Юлия Валерьевна",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000053689/timetable"
-            },
-            {
               "id": "550101000076033",
               "name": "Салангина Юлия Валерьевна",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000076033/timetable"
+            },
+            {
+              "id": "550101000053689",
+              "name": "Салангина Юлия Валерьевна",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000053689/timetable"
             },
             {
               "id": "550101000012681",

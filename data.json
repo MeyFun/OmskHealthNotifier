@@ -6226,11 +6226,6 @@
               "id": "550101000074900",
               "name": "Захарова Дарья Павловна",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000074900/timetable"
-            },
-            {
-              "id": "550101000058342",
-              "name": "Мельник Наталья Сергеевна",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000058342/timetable"
             }
           ]
         },
@@ -6373,24 +6368,24 @@
           "hospital_name": "БУЗОО \"ГП № 4\" / поликлиника                                    \nОМСК, КОРОЛЕВА, 10, корп. 2",
           "doctors": [
             {
-              "id": "550101000043300",
-              "name": "Вотинцева Галина Ивановна",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000043300/timetable"
-            },
-            {
               "id": "550101000027129",
               "name": "Вотинцева Галина Ивановна",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000027129/timetable"
             },
             {
-              "id": "550101000001665",
-              "name": "Колотуша Ирина Валентиновна",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000001665/timetable"
+              "id": "550101000043300",
+              "name": "Вотинцева Галина Ивановна",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000043300/timetable"
             },
             {
               "id": "550101000043298",
               "name": "Колотуша Ирина Валентиновна",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000043298/timetable"
+            },
+            {
+              "id": "550101000001665",
+              "name": "Колотуша Ирина Валентиновна",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000001665/timetable"
             }
           ]
         },
@@ -6677,6 +6672,11 @@
         {
           "hospital_name": "БУЗОО \"МУРОМЦЕВСКАЯ ЦРБ\" / Оториноларингологический кабинет                                    \nМУРОМЦЕВО, ЛЕНИНА, 144",
           "doctors": [
+            {
+              "id": "550101000083521",
+              "name": "Крюков Василий Николаевич",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000083521/timetable"
+            },
             {
               "id": "550101000081112",
               "name": "Шушакова Наталья Ивановна",
@@ -14996,16 +14996,6 @@
           ]
         },
         {
-          "hospital_name": "БУЗОО \"ГБ № 6\" / Стоматологическое отделение                                    \nОМСК, 1-Я ОСЕННЯЯ, 79",
-          "doctors": [
-            {
-              "id": "550101000069400",
-              "name": "Дворянчиков Максим Александрович",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000069400/timetable"
-            }
-          ]
-        },
-        {
           "hospital_name": "БУЗОО \"ГБ № 9\" / Стоматологическое отделение                                    \nОМСК, МЕЛЬНИЧНАЯ, 71",
           "doctors": [
             {
@@ -15189,14 +15179,14 @@
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000081551/timetable"
             },
             {
-              "id": "550101000078741",
-              "name": "Перелыгина Полина Анатольевна",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000078741/timetable"
-            },
-            {
               "id": "550101000078743",
               "name": "Перелыгина Полина Анатольевна",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000078743/timetable"
+            },
+            {
+              "id": "550101000078741",
+              "name": "Перелыгина Полина Анатольевна",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000078741/timetable"
             }
           ]
         },
@@ -21530,6 +21520,16 @@
               "id": "550101000083472",
               "name": "Речапов Ахмет Николаевич",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000083472/timetable"
+            }
+          ]
+        },
+        {
+          "hospital_name": "БУЗОО \"ГП № 15\" / Кабинет врача-хирурга                                    \nОМСК, ИРТЫШСКАЯ НАБЕРЕЖНАЯ, 19",
+          "doctors": [
+            {
+              "id": "550101000083857",
+              "name": "Байкова Валентина Евдокимовна",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000083857/timetable"
             }
           ]
         },

@@ -2510,14 +2510,14 @@
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000074996/timetable"
             },
             {
-              "id": "550101000023475",
-              "name": "Филиппов Сергей Олегович",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000023475/timetable"
-            },
-            {
               "id": "550101000081756",
               "name": "Филиппов Сергей Олегович",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000081756/timetable"
+            },
+            {
+              "id": "550101000023475",
+              "name": "Филиппов Сергей Олегович",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000023475/timetable"
             },
             {
               "id": "550101000023473",
@@ -2650,14 +2650,14 @@
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000066831/timetable"
             },
             {
-              "id": "550101000057180",
-              "name": "Тарасова Марина Викторовна",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000057180/timetable"
-            },
-            {
               "id": "550101000059454",
               "name": "Тарасова Марина Викторовна",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000059454/timetable"
+            },
+            {
+              "id": "550101000057180",
+              "name": "Тарасова Марина Викторовна",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000057180/timetable"
             },
             {
               "id": "550101000027485",
@@ -2890,14 +2890,14 @@
           "hospital_name": "БУЗОО \"КОРМИЛОВСКАЯ ЦРБ\" / Поликлиника                                    \nКОРМИЛОВКА, СВЕРДЛОВА, 33",
           "doctors": [
             {
-              "id": "550101000065466",
-              "name": "Атрощенко Марина Сергеевна",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000065466/timetable"
-            },
-            {
               "id": "550101000065467",
               "name": "Атрощенко Марина Сергеевна",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000065467/timetable"
+            },
+            {
+              "id": "550101000065466",
+              "name": "Атрощенко Марина Сергеевна",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000065466/timetable"
             }
           ]
         },
@@ -2955,6 +2955,11 @@
           "hospital_name": "БУЗОО \"ОКБ\" / Консультативная поликлиника                                    \nОМСК, БЕРЕЗОВАЯ, 3",
           "doctors": [
             {
+              "id": "550101000083869",
+              "name": "Задорожная Анна Валерьевна",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000083869/timetable"
+            },
+            {
               "id": "550101000021369",
               "name": "Кочеткова Ольга Валерьевна",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000021369/timetable"
@@ -3005,14 +3010,14 @@
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000014855/timetable"
             },
             {
-              "id": "550101000015871",
-              "name": "Щербакова Светлана Викторовна",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000015871/timetable"
-            },
-            {
               "id": "550101000015869",
               "name": "Щербакова Светлана Викторовна",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000015869/timetable"
+            },
+            {
+              "id": "550101000015871",
+              "name": "Щербакова Светлана Викторовна",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000015871/timetable"
             }
           ]
         },
@@ -18031,14 +18036,14 @@
           "hospital_name": "БУЗОО \"ГП № 8\" / Центр здоровья                                    \nОМСК, БАГРАТИОНА, 10",
           "doctors": [
             {
-              "id": "550101000071632",
-              "name": "Янов Виктор Геннадьевич",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000071632/timetable"
-            },
-            {
               "id": "550101000071420",
               "name": "Янов Виктор Геннадьевич",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000071420/timetable"
+            },
+            {
+              "id": "550101000071632",
+              "name": "Янов Виктор Геннадьевич",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000071632/timetable"
             }
           ]
         },
@@ -18366,14 +18371,14 @@
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000012777/timetable"
             },
             {
-              "id": "550101000012711",
-              "name": "Цибульская Наталья Анатольевна",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000012711/timetable"
-            },
-            {
               "id": "550101000082937",
               "name": "Цибульская Наталья Анатольевна",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000082937/timetable"
+            },
+            {
+              "id": "550101000012711",
+              "name": "Цибульская Наталья Анатольевна",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000012711/timetable"
             },
             {
               "id": "550101000026779",
@@ -18404,11 +18409,6 @@
               "id": "550101000082295",
               "name": "Гут Анастасия Ивановна",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000082295/timetable"
-            },
-            {
-              "id": "550101000079409",
-              "name": "Корзина Анастасия Борисовна",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000079409/timetable"
             },
             {
               "id": "550101000079394",

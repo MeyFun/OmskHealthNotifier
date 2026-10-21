@@ -11864,51 +11864,6 @@
       "url": "https://omskzdrav.ru/service/schedule/550101000000062/0/doctors",
       "hospitals": [
         {
-          "hospital_name": "БУЗОО \"ОКБ\" / Консультативная поликлиника                                    \nОМСК, БЕРЕЗОВАЯ, 3",
-          "doctors": [
-            {
-              "id": "550101000083364",
-              "name": "Богатырева Валентина Александровна",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000083364/timetable"
-            },
-            {
-              "id": "550101000010044",
-              "name": "Умнова Ирина Федоровна",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000010044/timetable"
-            }
-          ]
-        },
-        {
-          "hospital_name": "БУЗОО \"ГБ № 3\" / Кабинет врача-ревматолога                                    \nОМСК, ЭНЕРГЕТИКОВ, 19",
-          "doctors": [
-            {
-              "id": "550101000070633",
-              "name": "Притулла Мария Владимировна",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000070633/timetable"
-            }
-          ]
-        },
-        {
-          "hospital_name": "БУЗОО \"ГП № 6\" / Кабинет врача-ревматолога                                    \nОМСК, 2-Я ЛЮБИНСКАЯ, 2В",
-          "doctors": [
-            {
-              "id": "550101000069704",
-              "name": "Лапшина Анна Александровна",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000069704/timetable"
-            }
-          ]
-        },
-        {
-          "hospital_name": "БУЗОО \"КДЦ\" / Кабинет врача-ревматолога                                    \nОМСК, КАРЛА ЛИБКНЕХТА, 3",
-          "doctors": [
-            {
-              "id": "550101000079298",
-              "name": "Самбрат Анна Анатольевна",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000079298/timetable"
-            }
-          ]
-        },
-        {
           "hospital_name": "БУЗОО \"ККД\" / Ревматологическое отделение                                    \nОМСК, БУЛЬВАРНАЯ, 7",
           "doctors": [
             {
@@ -11950,6 +11905,46 @@
               "id": "550101000068431",
               "name": "Ярошинская Светлана Алексеевна",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000068431/timetable"
+            }
+          ]
+        },
+        {
+          "hospital_name": "БУЗОО \"ГБ № 3\" / Кабинет врача-ревматолога                                    \nОМСК, ЭНЕРГЕТИКОВ, 19",
+          "doctors": [
+            {
+              "id": "550101000070633",
+              "name": "Притулла Мария Владимировна",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000070633/timetable"
+            }
+          ]
+        },
+        {
+          "hospital_name": "БУЗОО \"ГП № 6\" / Кабинет врача-ревматолога                                    \nОМСК, 2-Я ЛЮБИНСКАЯ, 2В",
+          "doctors": [
+            {
+              "id": "550101000069704",
+              "name": "Лапшина Анна Александровна",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000069704/timetable"
+            }
+          ]
+        },
+        {
+          "hospital_name": "БУЗОО \"КДЦ\" / Кабинет врача-ревматолога                                    \nОМСК, КАРЛА ЛИБКНЕХТА, 3",
+          "doctors": [
+            {
+              "id": "550101000079298",
+              "name": "Самбрат Анна Анатольевна",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000079298/timetable"
+            }
+          ]
+        },
+        {
+          "hospital_name": "БУЗОО \"ОКБ\" / Консультативная поликлиника                                    \nОМСК, БЕРЕЗОВАЯ, 3",
+          "doctors": [
+            {
+              "id": "550101000010044",
+              "name": "Умнова Ирина Федоровна",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000010044/timetable"
             }
           ]
         }

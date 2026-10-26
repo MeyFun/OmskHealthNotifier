@@ -1583,6 +1583,11 @@
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000076824/timetable"
             },
             {
+              "id": "550101000083621",
+              "name": "Иваницкая Ксения Евгеньевна",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000083621/timetable"
+            },
+            {
               "id": "550101000074341",
               "name": "Костогладова Карина Валентиновна",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000074341/timetable"
@@ -11172,11 +11177,6 @@
               "id": "550101000072781",
               "name": "Барышева Ольга Михайловна",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000072781/timetable"
-            },
-            {
-              "id": "550101000082593",
-              "name": "Вишневская Виктория Владимировна",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000082593/timetable"
             },
             {
               "id": "550101000051540",
@@ -21205,11 +21205,6 @@
               "id": "550101000043671",
               "name": "Боковой Алексей Сергеевич",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000043671/timetable"
-            },
-            {
-              "id": "550101000059286",
-              "name": "Боковой Алексей Сергеевич",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000059286/timetable"
             }
           ]
         },
@@ -21882,14 +21877,14 @@
           "hospital_name": "БУЗОО \"ПАВЛОГРАДСКАЯ ЦРБ\" / Хирургическое отделение                                    \nПАВЛОГРАДКА, БОЛЬНИЧНАЯ, 23",
           "doctors": [
             {
-              "id": "550101000053789",
-              "name": "Жильцов Владимир Николаевич",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000053789/timetable"
-            },
-            {
               "id": "550101000053788",
               "name": "Жильцов Владимир Николаевич",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000053788/timetable"
+            },
+            {
+              "id": "550101000053789",
+              "name": "Жильцов Владимир Николаевич",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000053789/timetable"
             },
             {
               "id": "550101000068325",
@@ -21927,14 +21922,14 @@
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000078439/timetable"
             },
             {
-              "id": "550101000044470",
-              "name": "Шерматов Эмил Бактыбекович",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000044470/timetable"
-            },
-            {
               "id": "550101000043643",
               "name": "Шерматов Эмил Бактыбекович",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000043643/timetable"
+            },
+            {
+              "id": "550101000044470",
+              "name": "Шерматов Эмил Бактыбекович",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000044470/timetable"
             }
           ]
         },
@@ -22002,14 +21997,14 @@
           "hospital_name": "БУЗОО \"ТЕВРИЗСКАЯ ЦРБ\" / Хирургический кабинет                                    \nТЕВРИЗ, КАРБЫШЕВА, 33а, корп. 3",
           "doctors": [
             {
-              "id": "550101000048718",
-              "name": "Воронович Виталий Александрович",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000048718/timetable"
-            },
-            {
               "id": "550101000026338",
               "name": "Воронович Виталий Александрович",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000026338/timetable"
+            },
+            {
+              "id": "550101000048718",
+              "name": "Воронович Виталий Александрович",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000048718/timetable"
             },
             {
               "id": "550101000082957",

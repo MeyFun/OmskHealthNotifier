@@ -4063,12 +4063,17 @@
       "url": "https://omskzdrav.ru/service/schedule/550101000000023/0/doctors",
       "hospitals": [
         {
-          "hospital_name": "БУЗОО \"ИСИЛЬКУЛЬСКАЯ ЦРБ\" / Кардиологический кабинет                                    \nИСИЛЬКУЛЬ, ТЕЛЬМАНА, 167",
+          "hospital_name": "БУЗОО \"ГП № 8\" / Кардиологический кабинет                                    \nОМСК, БАГРАТИОНА, 10",
           "doctors": [
             {
-              "id": "550101000028410",
-              "name": "Выходцева Ольга Геннадьевна",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000028410/timetable"
+              "id": "550101000063968",
+              "name": "Булахова Елена Юрьевна",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000063968/timetable"
+            },
+            {
+              "id": "550101000064613",
+              "name": "Струкова Наталья Геннадьевна",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000064613/timetable"
             }
           ]
         },
@@ -4123,12 +4128,12 @@
           ]
         },
         {
-          "hospital_name": "БУЗОО \"ГП № 8\" / Кардиологический кабинет                                    \nОМСК, БАГРАТИОНА, 10",
+          "hospital_name": "БУЗОО \"ИСИЛЬКУЛЬСКАЯ ЦРБ\" / Кардиологический кабинет                                    \nИСИЛЬКУЛЬ, ТЕЛЬМАНА, 167",
           "doctors": [
             {
-              "id": "550101000064613",
-              "name": "Струкова Наталья Геннадьевна",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000064613/timetable"
+              "id": "550101000028410",
+              "name": "Выходцева Ольга Геннадьевна",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000028410/timetable"
             }
           ]
         },
@@ -6378,24 +6383,24 @@
           "hospital_name": "БУЗОО \"ГП № 4\" / поликлиника                                    \nОМСК, КОРОЛЕВА, 10, корп. 2",
           "doctors": [
             {
-              "id": "550101000043300",
-              "name": "Вотинцева Галина Ивановна",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000043300/timetable"
-            },
-            {
               "id": "550101000027129",
               "name": "Вотинцева Галина Ивановна",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000027129/timetable"
             },
             {
-              "id": "550101000001665",
-              "name": "Колотуша Ирина Валентиновна",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000001665/timetable"
+              "id": "550101000043300",
+              "name": "Вотинцева Галина Ивановна",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000043300/timetable"
             },
             {
               "id": "550101000043298",
               "name": "Колотуша Ирина Валентиновна",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000043298/timetable"
+            },
+            {
+              "id": "550101000001665",
+              "name": "Колотуша Ирина Валентиновна",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000001665/timetable"
             }
           ]
         },
@@ -6406,16 +6411,6 @@
               "id": "550101000047873",
               "name": "Свиридова Валерия Алексеевна",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000047873/timetable"
-            }
-          ]
-        },
-        {
-          "hospital_name": "БУЗОО \"ГП № 8\" / Оториноларингологический кабинет                                    \nОМСК, БАГРАТИОНА, 10",
-          "doctors": [
-            {
-              "id": "550101000042679",
-              "name": "Самылова Надежда Борисовна",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000042679/timetable"
             }
           ]
         },
@@ -9100,6 +9095,11 @@
               "id": "550101000076070",
               "name": "Медведева Ольга Геннадьевна",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000076070/timetable"
+            },
+            {
+              "id": "550101000014635",
+              "name": "Мельман Татьяна Павловна",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000014635/timetable"
             }
           ]
         },
@@ -9319,6 +9319,36 @@
           ]
         },
         {
+          "hospital_name": "БУЗОО \"ДГП № 5\" / Педиатрическое отделение                                    \nОМСК, БОГДАНА ХМЕЛЬНИЦКОГО, 146",
+          "doctors": [
+            {
+              "id": "550101000040798",
+              "name": "Алексеева Ирина Владиславовна",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000040798/timetable"
+            },
+            {
+              "id": "550101000048339",
+              "name": "Баженова Карина Кайратовна",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000048339/timetable"
+            },
+            {
+              "id": "550101000083196",
+              "name": "Гисс Артур Анатольевич",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000083196/timetable"
+            },
+            {
+              "id": "550101000083280",
+              "name": "Квачан Екатерина Андреевна",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000083280/timetable"
+            },
+            {
+              "id": "550101000040796",
+              "name": "Овчаренко Людмила Петровна",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000040796/timetable"
+            }
+          ]
+        },
+        {
           "hospital_name": "БУЗОО \"ДГП № 5\" / Педиатрическое отделение                                    \nОМСК, 2-Я ТРАНСПОРТНАЯ, 24",
           "doctors": [
             {
@@ -9365,36 +9395,6 @@
               "id": "550101000082151",
               "name": "Симиохин Сергей Алексеевич",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000082151/timetable"
-            }
-          ]
-        },
-        {
-          "hospital_name": "БУЗОО \"ДГП № 5\" / Педиатрическое отделение                                    \nОМСК, БОГДАНА ХМЕЛЬНИЦКОГО, 146",
-          "doctors": [
-            {
-              "id": "550101000040798",
-              "name": "Алексеева Ирина Владиславовна",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000040798/timetable"
-            },
-            {
-              "id": "550101000048339",
-              "name": "Баженова Карина Кайратовна",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000048339/timetable"
-            },
-            {
-              "id": "550101000083196",
-              "name": "Гисс Артур Анатольевич",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000083196/timetable"
-            },
-            {
-              "id": "550101000083280",
-              "name": "Квачан Екатерина Андреевна",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000083280/timetable"
-            },
-            {
-              "id": "550101000040796",
-              "name": "Овчаренко Людмила Петровна",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000040796/timetable"
             }
           ]
         },
@@ -15796,19 +15796,14 @@
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000082312/timetable"
             },
             {
-              "id": "550101000070558",
-              "name": "Комарова Эмилия Витальевна",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000070558/timetable"
+              "id": "550101000070050",
+              "name": "Коняева Александра Евгеньевна",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000070050/timetable"
             },
             {
               "id": "550101000070023",
               "name": "Коняева Александра Евгеньевна",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000070023/timetable"
-            },
-            {
-              "id": "550101000070050",
-              "name": "Коняева Александра Евгеньевна",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000070050/timetable"
             },
             {
               "id": "550101000072840",
@@ -15856,11 +15851,6 @@
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000071165/timetable"
             },
             {
-              "id": "550101000071156",
-              "name": "Антохина Светлана Викторовна",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000071156/timetable"
-            },
-            {
               "id": "550101000082310",
               "name": "Аполлонов Степан Евгеньевич",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000082310/timetable"
@@ -15886,14 +15876,14 @@
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000082309/timetable"
             },
             {
-              "id": "550101000071167",
-              "name": "Ерина Дарья Сергеевна",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000071167/timetable"
-            },
-            {
               "id": "550101000071162",
               "name": "Ерина Дарья Сергеевна",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000071162/timetable"
+            },
+            {
+              "id": "550101000071167",
+              "name": "Ерина Дарья Сергеевна",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000071167/timetable"
             },
             {
               "id": "550101000074558",
@@ -15946,14 +15936,14 @@
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000080017/timetable"
             },
             {
-              "id": "550101000071163",
-              "name": "Терещенко Галина Владимировна",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000071163/timetable"
-            },
-            {
               "id": "550101000071176",
               "name": "Терещенко Галина Владимировна",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000071176/timetable"
+            },
+            {
+              "id": "550101000071163",
+              "name": "Терещенко Галина Владимировна",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000071163/timetable"
             },
             {
               "id": "550101000023671",
@@ -15979,11 +15969,6 @@
               "id": "550101000081903",
               "name": "Чурсина Галина Александровна",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000081903/timetable"
-            },
-            {
-              "id": "550101000078347",
-              "name": "Швецова Елизавета Дмитриевна",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000078347/timetable"
             }
           ]
         },
@@ -16086,14 +16071,14 @@
           "hospital_name": "БУЗОО \"ГБ № 3\" / Терапевтическое отделение № 2                                    \nОМСК, ЭНЕРГЕТИКОВ, 19",
           "doctors": [
             {
-              "id": "550101000063026",
-              "name": "Беленко Людмила Владимировна",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000063026/timetable"
-            },
-            {
               "id": "550101000061672",
               "name": "Беленко Людмила Владимировна",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000061672/timetable"
+            },
+            {
+              "id": "550101000063026",
+              "name": "Беленко Людмила Владимировна",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000063026/timetable"
             },
             {
               "id": "550101000076615",
@@ -17191,11 +17176,6 @@
           "hospital_name": "БУЗОО \"ГП № 13\" / Терапевтическое отделение филиала                                    \nОМСК, ОРДЖОНИКИДЗЕ, 273, корп. Б",
           "doctors": [
             {
-              "id": "550101000074758",
-              "name": "Галиханова Елизавета Венеровна",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000074758/timetable"
-            },
-            {
               "id": "550101000004226",
               "name": "Гетман Светлана Ивановна",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000004226/timetable"
@@ -17646,14 +17626,14 @@
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000045069/timetable"
             },
             {
-              "id": "550101000029890",
-              "name": "Кочимов Роман",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000029890/timetable"
-            },
-            {
               "id": "550101000068165",
               "name": "Кочимов Роман",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000068165/timetable"
+            },
+            {
+              "id": "550101000029890",
+              "name": "Кочимов Роман",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000029890/timetable"
             },
             {
               "id": "550101000065241",
@@ -17661,14 +17641,14 @@
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000065241/timetable"
             },
             {
-              "id": "550101000045186",
-              "name": "Маздакова Марина Геннадьевна",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000045186/timetable"
-            },
-            {
               "id": "550101000029128",
               "name": "Маздакова Марина Геннадьевна",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000029128/timetable"
+            },
+            {
+              "id": "550101000045186",
+              "name": "Маздакова Марина Геннадьевна",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000045186/timetable"
             },
             {
               "id": "550101000001594",
@@ -18341,14 +18321,14 @@
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000012777/timetable"
             },
             {
-              "id": "550101000012711",
-              "name": "Цибульская Наталья Анатольевна",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000012711/timetable"
-            },
-            {
               "id": "550101000082937",
               "name": "Цибульская Наталья Анатольевна",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000082937/timetable"
+            },
+            {
+              "id": "550101000012711",
+              "name": "Цибульская Наталья Анатольевна",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000012711/timetable"
             },
             {
               "id": "550101000026779",
@@ -19801,14 +19781,14 @@
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000013155/timetable"
             },
             {
-              "id": "550101000053689",
-              "name": "Салангина Юлия Валерьевна",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000053689/timetable"
-            },
-            {
               "id": "550101000076033",
               "name": "Салангина Юлия Валерьевна",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000076033/timetable"
+            },
+            {
+              "id": "550101000053689",
+              "name": "Салангина Юлия Валерьевна",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000053689/timetable"
             },
             {
               "id": "550101000012681",
@@ -20276,6 +20256,16 @@
               "id": "550101000070154",
               "name": "Юскаева Лариса Николаевна",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000070154/timetable"
+            }
+          ]
+        },
+        {
+          "hospital_name": "БУЗОО \"ДГП № 6\" / Консультативно-диагностическое отделение                                    \nОМСК, КАРБЫШЕВА, 20",
+          "doctors": [
+            {
+              "id": "550101000007886",
+              "name": "Юрлагина Ольга Игоревна",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000007886/timetable"
             }
           ]
         },
@@ -21240,11 +21230,6 @@
               "id": "550101000075590",
               "name": "Стрельцова Елизавета Владимировна",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000075590/timetable"
-            },
-            {
-              "id": "550101000068564",
-              "name": "Школа Максим Александрович",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000068564/timetable"
             }
           ]
         },
@@ -21872,14 +21857,14 @@
           "hospital_name": "БУЗОО \"ПАВЛОГРАДСКАЯ ЦРБ\" / Хирургическое отделение                                    \nПАВЛОГРАДКА, БОЛЬНИЧНАЯ, 23",
           "doctors": [
             {
-              "id": "550101000053788",
-              "name": "Жильцов Владимир Николаевич",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000053788/timetable"
-            },
-            {
               "id": "550101000053789",
               "name": "Жильцов Владимир Николаевич",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000053789/timetable"
+            },
+            {
+              "id": "550101000053788",
+              "name": "Жильцов Владимир Николаевич",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000053788/timetable"
             },
             {
               "id": "550101000068325",
@@ -21912,9 +21897,9 @@
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000025325/timetable"
             },
             {
-              "id": "550101000078439",
+              "id": "550101000044470",
               "name": "Шерматов Эмил Бактыбекович",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000078439/timetable"
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000044470/timetable"
             },
             {
               "id": "550101000043643",
@@ -21922,9 +21907,9 @@
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000043643/timetable"
             },
             {
-              "id": "550101000044470",
+              "id": "550101000078439",
               "name": "Шерматов Эмил Бактыбекович",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000044470/timetable"
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000078439/timetable"
             }
           ]
         },
@@ -21992,14 +21977,14 @@
           "hospital_name": "БУЗОО \"ТЕВРИЗСКАЯ ЦРБ\" / Хирургический кабинет                                    \nТЕВРИЗ, КАРБЫШЕВА, 33а, корп. 3",
           "doctors": [
             {
-              "id": "550101000026338",
-              "name": "Воронович Виталий Александрович",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000026338/timetable"
-            },
-            {
               "id": "550101000048718",
               "name": "Воронович Виталий Александрович",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000048718/timetable"
+            },
+            {
+              "id": "550101000026338",
+              "name": "Воронович Виталий Александрович",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000026338/timetable"
             },
             {
               "id": "550101000082957",

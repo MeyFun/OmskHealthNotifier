@@ -12041,14 +12041,14 @@
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000055260/timetable"
             },
             {
-              "id": "550101000055249",
-              "name": "Полецкая Дарья Андреевна",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000055249/timetable"
-            },
-            {
               "id": "550101000016428",
               "name": "Полецкая Дарья Андреевна",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000016428/timetable"
+            },
+            {
+              "id": "550101000055249",
+              "name": "Полецкая Дарья Андреевна",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000055249/timetable"
             },
             {
               "id": "550101000016447",
@@ -12469,16 +12469,6 @@
               "id": "550101000039325",
               "name": "Смоленцева Елена Владимировна",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000039325/timetable"
-            }
-          ]
-        },
-        {
-          "hospital_name": "БУЗОО \"УСТЬ-ИШИМСКАЯ ЦРБ\" / Поликлиника                                    \nУСТЬ-ИШИМ, БОЛЬНИЧНАЯ, 8",
-          "doctors": [
-            {
-              "id": "550101000009836",
-              "name": "Перминова Евгения Николаевна",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000009836/timetable"
             }
           ]
         },

@@ -1168,14 +1168,14 @@
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000072752/timetable"
             },
             {
-              "id": "550101000081982",
-              "name": "Гущина Елена Митрофановна",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000081982/timetable"
-            },
-            {
               "id": "550101000072833",
               "name": "Гущина Елена Митрофановна",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000072833/timetable"
+            },
+            {
+              "id": "550101000081982",
+              "name": "Гущина Елена Митрофановна",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000081982/timetable"
             },
             {
               "id": "550101000077487",
@@ -1751,6 +1751,11 @@
               "id": "550101000066817",
               "name": "Вишня Ольга Сергеевна",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000066817/timetable"
+            },
+            {
+              "id": "550101000084157",
+              "name": "Гомбоева Дарья Георгиевна",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000084157/timetable"
             }
           ]
         },
@@ -1903,14 +1908,14 @@
           "hospital_name": "БУЗОО \"МОСКАЛЕНСКАЯ ЦРБ\" / Женская консультация                                    \nМОСКАЛЕНКИ, НЕФТЯНИКОВ, 10",
           "doctors": [
             {
-              "id": "550101000067590",
-              "name": "Калиновская Наталья Ивановна",
-              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000067590/timetable"
-            },
-            {
               "id": "550101000006777",
               "name": "Калиновская Наталья Ивановна",
               "schedule_url": "https://omskzdrav.ru/service/schedule/550101000006777/timetable"
+            },
+            {
+              "id": "550101000067590",
+              "name": "Калиновская Наталья Ивановна",
+              "schedule_url": "https://omskzdrav.ru/service/schedule/550101000067590/timetable"
             },
             {
               "id": "550101000006525",
